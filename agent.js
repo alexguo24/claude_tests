@@ -37,7 +37,7 @@ function runTool(name, input) {
   return `Error: unknown tool ${name}`;
 }
 
-// 3. The agent loop
+// 3. The agent loop, what is actually being called by the user to start things, calls on runTool & tools 
 async function runAgent(userMessage) {
   let messages = [{ role: 'user', content: userMessage }];
 
